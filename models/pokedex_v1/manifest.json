@@ -1,0 +1,40 @@
+{
+  "name": "Pokedex v1",
+  "scope": "Gen 1-9, top-semua, 746 kelas",
+  "img_size": 224,
+  "bg_color": [
+    255,
+    255,
+    255
+  ],
+  "layout": "NHWC",
+  "input_scale": 1.0,
+  "output": "auto",
+  "info": "pokemon_info.json",
+  "source": {
+    "best_models": {
+      "type": {
+        "model_name": "type_baseline",
+        "test_acc": 0.23527950310559007,
+        "test_f1_macro": 0.18161990551421642
+      },
+      "species": {
+        "model_name": "species_mobilenetv2",
+        "test_acc": 0.9387186629526463,
+        "test_f1_macro": 0.9040137564911592
+      }
+    },
+    "converted_with": {
+      "type": "savedmodel",
+      "species": "savedmodel"
+    }
+  },
+  "type": {
+    "model": "type_model.onnx",
+    "classes": "class_names_type.json"
+  },
+  "species": {
+    "model": "species_model.onnx",
+    "classes": "class_names_species.json"
+  }
+}
